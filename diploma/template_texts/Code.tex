@@ -1,0 +1,28 @@
+\chapter{Листинги кода}\label{ch:code}
+
+Для включения в текст листингов кода удобно использовать пакет
+
+\verb|\usepackage{minted}|
+
+Для использования нужно будет верстать с ключём \verb|-shell-escape|:
+\begin{verbatim}
+latex -shell-escape doc.tex
+\end{verbatim} и установить питоновский пакет pygments.
+
+Вместо \verb|latex| может быть \verb|pdflatex| или \verb|xelatex|.
+\begin{verbatim}
+Код, включённый в текст: 
+\mintinline{c++}{float var;}:
+\mintinline{c}{float var;} 
+Или так
+\begin{minted}{c++}
+vector<Param> All_Parameters;
+struct Param
+{
+   short int Var0;
+   float_t Var1;//float_t переменная 
+   bool Tr;
+   vector<string> Param_Values;//значения параметра
+};
+\end{minted}
+\end{verbatim}
